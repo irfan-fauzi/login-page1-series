@@ -1,0 +1,184 @@
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html {
+  font-family: 'Poppins', sans-serif;
+}
+
+.waves {
+  position: fixed;
+  height: 100%;
+  left: 0;
+  bottom: 0;
+  z-index: -1;
+}
+
+.main {
+  height: 100vh;
+  width: 100%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  gap: 7rem;
+  padding: 0 2rem;
+}
+
+.img {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.img img {
+  width: 500px;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.login-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+}
+
+form {
+  width: 360px;
+}
+
+form a {
+  text-decoration: none;
+  color: #999;
+  display: block;
+  text-align: center;
+  font-size: 0.9rem;
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+form a:hover {
+  color: red;
+}
+
+form .input-div {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 3% 92%;
+      grid-template-columns: 3% 92%;
+  border-bottom: 1px solid #d9d9d9;
+}
+
+form .input-div div {
+  position: relative;
+  height: 45px;
+}
+
+form .input-div .input-wrap h5 {
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  color: #9999;
+  font-size: 1rem;
+  -webkit-transition: all 1s;
+  transition: all 1s;
+}
+
+form .input-div .input-wrap .input {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border: none;
+  left: 0;
+  top: 0;
+  outline: 0;
+  padding: 0.5rem 0.7rem;
+  background: none;
+  font-size: 1.2rem;
+  color: #555;
+  font-family: 'Poppins', sans-serif;
+}
+
+form .input-div .input-wrap h5:hover {
+  color: grey;
+}
+
+form .input-div .icon {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+form .input-div .icon i {
+  color: #d9d9d9;
+}
+
+form .input-div.focus .icon i {
+  color: black;
+}
+
+form .input-div.one {
+  margin-top: 0;
+}
+
+form .input-div.two {
+  margin-bottom: 4px;
+}
+
+form h2 {
+  font-size: 2.9rem;
+  text-transform: uppercase;
+  margin: 15px 0;
+  color: #333;
+}
+
+form .avatar {
+  width: 100px;
+}
+
+.btn {
+  margin: 1rem 0;
+  background-image: -webkit-gradient(linear, left top, right top, from(#00B0FF), to(#0056FF));
+  background-image: linear-gradient(to right, #00B0FF, #0056FF);
+  display: block;
+  width: 100%;
+  height: 45px;
+  border-radius: 25px;
+  border: 0;
+  outline: 0;
+  font-size: 1rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: white;
+  font-family: 'Poppins', sans-serif;
+  background-size: 200%;
+  -webkit-transition: 1.2s;
+  transition: 1.2s;
+}
+
+.btn:hover {
+  background-position: right;
+}
+/*# sourceMappingURL=index.css.map */
