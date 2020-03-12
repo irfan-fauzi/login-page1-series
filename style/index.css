@@ -76,6 +76,7 @@ form a:hover {
 }
 
 form .input-div {
+  position: relative;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 3% 92%;
@@ -100,6 +101,10 @@ form .input-div .input-wrap h5 {
   transition: all 1s;
 }
 
+form .input-div .input-wrap h5:hover {
+  color: black;
+}
+
 form .input-div .input-wrap .input {
   position: absolute;
   width: 100%;
@@ -113,10 +118,6 @@ form .input-div .input-wrap .input {
   font-size: 1.2rem;
   color: #555;
   font-family: 'Poppins', sans-serif;
-}
-
-form .input-div .input-wrap h5:hover {
-  color: grey;
 }
 
 form .input-div .icon {
@@ -135,8 +136,22 @@ form .input-div .icon i {
   color: #d9d9d9;
 }
 
+form .input-div::after,
+form .input-div::before {
+  content: "satu";
+  top: 15px;
+  position: absolute;
+  background: red;
+  right: 0;
+}
+
 form .input-div.focus .icon i {
-  color: black;
+  color: #0056FF;
+}
+
+form .input-div.focus div h5 {
+  top: -5px;
+  font-size: 15px;
 }
 
 form .input-div.one {
