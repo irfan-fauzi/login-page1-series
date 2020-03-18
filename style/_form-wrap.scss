@@ -2,6 +2,7 @@ form {
   width: 360px;
 
   a {
+    margin-top: 20px;
     text-decoration: none;
     color: #999;
     // ubah display defult dari inline menjadi block
@@ -73,28 +74,44 @@ form {
 
       i {
         color: #d9d9d9;
+        transition: .3s;
       }
     }
   }
 
   .input-div::after,
   .input-div::before {
-    content: "satu";
-    top: 15px;
+    content: "";
     position: absolute;
-    background: red;
-    right: 0;
+    background: #00B0FF;
+    bottom: -2px;
+    width: 0;
+    height: 0.1rem;
+    transition: 1s;
 
+  }
+
+  .input-div::after {
+    right: 50%;
+  }
+
+  .input-div::before {
+    left: 50%;
   }
 
 
   .input-div.focus .icon i {
-    color: #0056FF;
+    color: #00B0FF;
   }
 
   .input-div.focus div h5 {
     top: -5px;
     font-size: 15px;
+  }
+
+  .input-div.focus::after,
+  .input-div.focus::before {
+    width: 50%;
   }
 
   .input-div.one {
@@ -109,12 +126,27 @@ form {
     font-size: 2.9rem;
     text-transform: uppercase;
     margin: 15px 0;
-    color: #333;
+    color: #00B0FF;
+  }
+
+  h5 {
+    color: #00B0FF;
   }
 
 
 
   .avatar {
     width: 100px;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  form {
+    width: 18rem;
+
+    h2 {
+      font-size: 2.4rem;
+      margin: 8px 0;
+    }
   }
 }

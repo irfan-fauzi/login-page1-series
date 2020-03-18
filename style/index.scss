@@ -17,6 +17,12 @@ html {
     z-index: -1;
 }
 
+@media screen and (max-width: 900px) {
+    .waves {
+        display: none;
+    }
+}
+
 
 
 @import "./main";

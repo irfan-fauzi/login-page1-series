@@ -17,6 +17,12 @@ html {
   z-index: -1;
 }
 
+@media screen and (max-width: 900px) {
+  .waves {
+    display: none;
+  }
+}
+
 .main {
   height: 100vh;
   width: 100%;
@@ -26,6 +32,19 @@ html {
       grid-template-columns: 1fr 1fr;
   gap: 7rem;
   padding: 0 2rem;
+}
+
+@media screen and (max-width: 1050px) {
+  .main {
+    gap: 5rem;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .main {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
 }
 
 .img {
@@ -42,6 +61,18 @@ html {
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
+}
+
+@media screen and (max-width: 1000px) {
+  .img img {
+    width: 400px;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .img {
+    display: none;
+  }
 }
 
 .login-container {
@@ -62,6 +93,7 @@ form {
 }
 
 form a {
+  margin-top: 20px;
   text-decoration: none;
   color: #999;
   display: block;
@@ -134,24 +166,42 @@ form .input-div .icon {
 
 form .input-div .icon i {
   color: #d9d9d9;
+  -webkit-transition: .3s;
+  transition: .3s;
 }
 
 form .input-div::after,
 form .input-div::before {
-  content: "satu";
-  top: 15px;
+  content: "";
   position: absolute;
-  background: red;
-  right: 0;
+  background: #00B0FF;
+  bottom: -2px;
+  width: 0;
+  height: 0.1rem;
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
+form .input-div::after {
+  right: 50%;
+}
+
+form .input-div::before {
+  left: 50%;
 }
 
 form .input-div.focus .icon i {
-  color: #0056FF;
+  color: #00B0FF;
 }
 
 form .input-div.focus div h5 {
   top: -5px;
   font-size: 15px;
+}
+
+form .input-div.focus::after,
+form .input-div.focus::before {
+  width: 50%;
 }
 
 form .input-div.one {
@@ -166,11 +216,25 @@ form h2 {
   font-size: 2.9rem;
   text-transform: uppercase;
   margin: 15px 0;
-  color: #333;
+  color: #00B0FF;
+}
+
+form h5 {
+  color: #00B0FF;
 }
 
 form .avatar {
   width: 100px;
+}
+
+@media screen and (max-width: 1000px) {
+  form {
+    width: 18rem;
+  }
+  form h2 {
+    font-size: 2.4rem;
+    margin: 8px 0;
+  }
 }
 
 .btn {
